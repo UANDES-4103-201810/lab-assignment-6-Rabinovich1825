@@ -3174,3 +3174,178 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2018-04-17 19:53:07 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 324ms (Views: 299.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/4" for 127.0.0.1 at 2018-04-17 19:54:02 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hLkBQpBmhCu089cUG5H5wpooHUDPdk8MduiKAKb8ysWLt4fStkf87L5DzkbgIS/UDvU0vt0c7EUf+4qibwW3Qw==", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 35ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-17 19:55:58 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (28.2ms)
+  Rendered users/edit.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-17 19:56:01 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-17 19:56:04 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 38.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-17 19:56:06 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2018-04-17 19:56:15 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.5ms)
+  Rendered users/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-17 19:56:19 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-17 19:58:20 -0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 328ms (Views: 318.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2018-04-17 19:58:27 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dR36soJDi1ZEkQwcstdMR+IjZuMDPIO7ROo7Zho5MaZ6E3wipGLzkU4hFU5JZ5pRdv5PHRFWIPIt+TvE08BMIA==", "session"=>{"email"=>"baperez@miuandes.cl", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "baperez@miuandes.cl"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 37ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2018-04-17 19:58:27 -0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2018-04-17 19:58:30 -0300
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.5ms)
+  Rendered users/edit.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-17 19:58:32 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-04-17 19:58:37 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SPd8jRhZz2jAVGWdtrE3K+jOcO9yvx2vlXNjQO7E3WZH+fodPni3r8rkfM9NAeE9fBNZEWDVvub8YGPiJz2g4A==", "id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:56:in `user_params'
+app/controllers/users_controller.rb:44:in `destroy'
+Started GET "/users" for 127.0.0.1 at 2018-04-17 19:59:45 -0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 361ms (Views: 336.3ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/3" for 127.0.0.1 at 2018-04-17 19:59:49 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mACUTMjqKGOwcOIY9sX6yWpE7EcDdh8arhE9cNmnouuXDhLc7stQpLrA+0oNdSzf/pnFuREcvFPHAj3SEF7fbQ==", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for UsersController#destroy, rendering head :no_content
+Completed 204 No Content in 45ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-17 20:00:34 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 377ms (Views: 356.5ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/users/4" for 127.0.0.1 at 2018-04-17 20:00:38 -0300
+Processing by UsersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xx7mTWeCxHUjBkDOQNG4JZXkXOHjfGtS/pe6Q5QCemfIEGDdQaO8sim2WZy7YW4zATl1H/EWyBuXhLrhXfsH4Q==", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 24ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-17 20:00:38 -0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+

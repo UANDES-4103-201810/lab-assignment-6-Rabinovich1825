@@ -41,7 +41,9 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    #complete this method
+    user = User.find_by_id(params[:id])
+    user.destroy
+    redirect_to users_path
   end
 
   private
