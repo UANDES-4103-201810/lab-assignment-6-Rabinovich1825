@@ -25,13 +25,17 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    #complete this method
+    User.create(user_params)
+    flash[:notice] = "user " + user_params[:email] + " created"
+    redirect_to :controller => 'users', :action => 'show', :id => session[:current_user_id]
   end
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    #complete this method
+    user = User.find_by_id(session[:current_user_id])
+    user.update(user_params)
+    redirect_to :controller => 'users', :action => 'show', :id => session[:current_user_id]
   end
 
   # DELETE /users/1
